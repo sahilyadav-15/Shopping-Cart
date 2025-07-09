@@ -30,12 +30,18 @@ export default function Cart() {
                   <span>{item.name}</span>
                   <span> ({formattedPrice})</span>
                 </div>
-                <div className="cart-item-actions">
-                  <button onClick={() => updateItemQuantity(item.id, -1)}>
+                <div className="cart-item-actions text-base flex gap-2 items-center">
+                  <button
+                    className="bg-transparent border-none rounded-md text-[#201e1a] cursor-pointer text-lg hover:bg-[#f5b744] pb-[0.2rem]"
+                    onClick={() => updateItemQuantity(item.id, -1)}
+                  >
                     -
                   </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => updateItemQuantity(item.id, 1)}>
+                  <button
+                    className="bg-transparent border-none rounded-md text-[#201e1a] cursor-pointer text-lg hover:bg-[#f5b744]"
+                    onClick={() => updateItemQuantity(item.id, 1)}
+                  >
                     +
                   </button>
                 </div>
@@ -44,7 +50,7 @@ export default function Cart() {
           })}
         </ul>
       )}
-      <p id="cart-total-price">
+      <p id="cart-total-price" className="text-right mb-2">
         Cart Total: <strong>{formattedTotalPrice}</strong>
       </p>
     </div>

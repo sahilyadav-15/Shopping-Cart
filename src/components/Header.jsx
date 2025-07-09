@@ -13,13 +13,18 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
     modal.current.open();
   }
 
-  let modalActions = <button>Close</button>;
+  const baseButton = "rounded-md border-none cursor-pointer";
+
+  const closeButton = `${baseButton} bg-transparent text-[#201e1a] text-[1.1rem] hover:text-[#453719]`;
+  const checkoutButton = `${baseButton} bg-[#271e07] text-[#f9efda] text-base px-4 py-2 hover:bg-[#382e1b]`;
+
+  let modalActions = <button className={closeButton}>Close</button>;
 
   if (cartQuantity > 0) {
     modalActions = (
       <>
-        <button>Close</button>
-        <button>Checkout</button>
+        <button className={closeButton}>Close</button>
+        <button className={checkoutButton}>Checkout</button>
       </>
     );
   }
