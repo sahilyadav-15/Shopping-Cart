@@ -14,12 +14,18 @@ export default function Cart() {
     <div id="cart">
       {items.length === 0 && <p>No items in cart!</p>}
       {items.length > 0 && (
-        <ul id="cart-items">
+        <ul
+          id="cart-items"
+          className="list-none my-4 mx-0 p-0 flex flex-col gap-2"
+        >
           {items.map((item) => {
             const formattedPrice = `₹${item.price.toFixed(2)}`;
 
             return (
-              <li key={item.id}>
+              <li
+                className="flex justify-between items-center py-2 px-4 bg-[#fbd392] rounded-md text-sm"
+                key={item.id}
+              >
                 <div>
                   <span>{item.name}</span>
                   <span> ({formattedPrice})</span>
