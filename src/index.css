@@ -15,23 +15,6 @@ body {
   min-height: 100vh;
 }
 
-#checkout {
-  animation: fade-slide-in-from-right 0.3s ease-in-out;
-}
-
-#checkout label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-#checkout input {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 1rem;
-}
-
 @keyframes fade-slide-in-from-top {
   0% {
     opacity: 0;
